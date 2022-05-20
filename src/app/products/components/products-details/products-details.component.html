@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <ng-container *ngIf="products">
+                <div class="container">
+                    <div class="row">
+                        <div class="card mb-3">
+                            <img src="https://www.cmete.com/skins/theme_cmete_2016/images/placeholders/slider-fixed-placeholder.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{products.title}}</h5>
+                              <h5 class="card-title">{{products.price | currency}}</h5>
+                              <h6 class="card-title">{{products.category}}</h6>
+                              <p class="card-text">{{products.description}}</p>
+                            </div>
+                          </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg" routerLink="/products">Back</button>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

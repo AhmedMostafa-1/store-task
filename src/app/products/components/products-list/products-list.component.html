@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3" *ngFor="let product of products; let i = index">
+            <div class="card" style="width: 18rem;">
+                <img [src]="product?.image" class="card-img-top" alt="..." height="300px">
+                <div class="card-body">
+                  <h5 class="card-title">{{product?.title}}</h5>
+                  <p class="card-text">{{product.price | currency}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{product?.category}}</li>
+                </ul>
+                <div class="card-body">
+                  <a [routerLink]="[product.id]" class="card-link">View Details</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
